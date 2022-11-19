@@ -1,5 +1,6 @@
 #include <LiquidCrystal.h>
 
+
 LiquidCrystal lcd(6, 7, 8, 9, 10, 11);
 float gasPin = A0;
 float gasLevel;
@@ -8,6 +9,7 @@ int buttonPin = 3;
 int buzzPin = 4;
 int buttonState;
 int fan = 5;
+
 
 void setup(){
   pinMode(ledPin, OUTPUT);
@@ -23,6 +25,7 @@ void setup(){
   delay(500);
   lcd.clear();
 }
+
 
 void loop(){
   // Read the value from gas sensor and button
@@ -61,6 +64,8 @@ void gasDetected(float gasLevel){
    lcd.clear();
   }
 }
+
+
 //BUZZER
 void buzzer(float gasLevel){
 if(gasLevel>=300)
@@ -74,6 +79,8 @@ if(gasLevel>=300)
   }
   }
 }
+
+
 // Manually Exhaust FAN ON
 void exhaustFanOn(int buttonState){
   if(buttonState == HIGH){
