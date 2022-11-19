@@ -59,6 +59,7 @@ void gasDetected(float gasLevel){
    lcd.clear();
   }
 }
+
 //BUZZER
 void buzzer(float gasLevel){
 if(gasLevel>=300)
