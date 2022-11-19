@@ -95,13 +95,6 @@ void exhaustFanOn(int buttonState){
   }
 }
 
-void loop(){
-  // Read the value from gas sensor and button
-  gasLevel = analogRead(gasPin);
-  buttonState = digitalRead(buttonPin);
-  
-  // call the function for gas detection and button work
-  gasDetected(gasLevel);
-  buzzer(gasLevel);
-  exhaustFanOn(buttonState);
-}
+
+
+
