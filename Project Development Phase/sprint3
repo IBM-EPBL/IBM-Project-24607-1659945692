@@ -94,7 +94,3 @@ void exhaustFanOn(int buttonState){
     lcd.clear();
   }
 }
-
-
-
-
