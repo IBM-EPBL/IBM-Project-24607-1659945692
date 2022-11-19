@@ -1,5 +1,6 @@
 #include <LiquidCrystal.h>
 
+
 LiquidCrystal lcd(6, 7, 8, 9, 10, 11);
 float gasPin = A0;
 float gasLevel;
@@ -33,6 +34,7 @@ void loop(){
   exhaustFanOn(buttonState);
 }
 
+
 // Gas Leakage Detection & Automatic Alarm and Fan ON
 void gasDetected(float gasLevel){
   if(gasLevel >= 300){
@@ -60,6 +62,7 @@ void gasDetected(float gasLevel){
   }
 }
 
+
 //BUZZER
 void buzzer(float gasLevel){
 if(gasLevel>=300)
@@ -73,6 +76,8 @@ if(gasLevel>=300)
   }
   }
 }
+
+
 // Gas Leakage Detection & Automatic Alarm and Fan ON
 void gasDetected(float gasLevel){
   if(gasLevel >= 300){
@@ -99,6 +104,8 @@ void gasDetected(float gasLevel){
    lcd.clear();
   }
 }
+
+
 // Manually Exhaust FAN ON
 void exhaustFanOn(int buttonState){
   if(buttonState == HIGH){
