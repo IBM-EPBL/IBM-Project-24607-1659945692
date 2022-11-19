@@ -30,7 +30,7 @@ void loop(){
   buttonState = digitalRead(buttonPin);
   gasDetected(gasLevel);
   buzzer(gasLevel);
-  exhaustFanOn(buttonState)
+  exhaustFanOn(buttonState);
 }
 
 // Gas Leakage Detection & Automatic Alarm and Fan ON
