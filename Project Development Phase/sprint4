@@ -78,6 +78,21 @@ if(gasLevel>=300)
 }
 
 
+//BUZZER
+void buzzer(float gasLevel){
+if(gasLevel>=300)
+  {
+  for(int i=0; i<=30; i=i+10)
+  {
+  tone(4,i);
+  delay(400);
+  noTone(4);
+  delay(400);
+  }
+  }
+}
+
+
 // Gas Leakage Detection & Automatic Alarm and Fan ON
 void gasDetected(float gasLevel){
   if(gasLevel >= 300){
